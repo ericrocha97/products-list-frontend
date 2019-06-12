@@ -14,6 +14,7 @@ class New extends Component {
     handleSubmit = async e => {
         e.preventDefault();
         const data = this.state
+        console.log(this.state)
         await api.post('products', {
             title: data.title,
             description: data.description,
@@ -23,11 +24,12 @@ class New extends Component {
 
     handleChange = e => {
         this.setState({ [e.target.name]: e.target.value});
+        console.log(this.state)
     }
 
     render() {
         return (
-            <form id="new-post">
+            <form id="new-post" onSubmit={this.handleSubmit}>
                 <input 
                     type="text" 
                     name="title" 

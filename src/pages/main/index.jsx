@@ -36,6 +36,7 @@ export default class Main extends Component {
     }
 
     prevPage = () => {
+        //eslint-disable-next-line 
         const { page, productInfo } = this.state;
 
         if(page === 1) return;
