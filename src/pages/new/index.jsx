@@ -14,17 +14,16 @@ class New extends Component {
     handleSubmit = async e => {
         e.preventDefault();
         const data = this.state
-        console.log(this.state)
         await api.post('products', {
             title: data.title,
             description: data.description,
             url: data.url
         })
+        this.props.history.push('/');
     }
 
     handleChange = e => {
         this.setState({ [e.target.name]: e.target.value});
-        console.log(this.state)
     }
 
     render() {
