@@ -1,8 +1,13 @@
 header#main-header {
+    background: #206fb6;
+    height: 72px;
+}
+
+header#main-header .header-content {
     width: 100%;
     max-width: 980px;
-    height: 60px;
-    background: #206fb6;
+    margin: 0 auto;
+    height: 72px;
     font-size: 18px;
     font-weight: bold;
     color: #fff;
