@@ -13,11 +13,11 @@ class New extends Component {
 
     handleSubmit = async e => {
         e.preventDefault();
-
+        const data = this.state
         await api.post('products', {
-            title,
-            description,
-            url
+            title: data.title,
+            description: data.description,
+            url: data.url
         })
     }
 
