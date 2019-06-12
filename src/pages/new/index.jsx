@@ -5,6 +5,26 @@ import './styles.css';
 
 
 class New extends Component {
+    state = {
+        title: '',
+        description: '',
+        url: '',
+    };
+
+    handleSubmit = async e => {
+        e.preventDefault();
+
+        await api.post('products', {
+            title,
+            description,
+            url
+        })
+    }
+
+    handleChange = e => {
+        this.setState({ [e.target.naem]: e.target.value});
+    }
+
     render() {
         return (
             <form id="new-post">
@@ -12,16 +32,22 @@ class New extends Component {
                     type="text" 
                     name="title" 
                     placeholder="Titulo"
+                    onChange={this.handleChange}
+                    value={this.state.title}
                 />
                 <input 
                     type="text" 
                     name="description" 
                     placeholder="Descrição"
+                    onChange={this.handleChange}
+                    value={this.state.description}
                 />
                 <input 
                     type="text" 
                     name="url" 
                     placeholder="Url"
+                    onChange={this.handleChange}
+                    value={this.state.url}
                 />
                 <button type="submit">Enviar</button>
             </form>

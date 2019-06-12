@@ -1,13 +1,15 @@
 header#main-header {
     width: 100%;
+    max-width: 980px;
     height: 60px;
     background: #206fb6;
     font-size: 18px;
     font-weight: bold;
     color: #fff;
+    padding: 0 30px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
 }
 
 a {

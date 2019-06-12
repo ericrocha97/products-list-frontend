@@ -50,6 +50,7 @@ export default class Main extends Component {
     render() {
         const { products, page, productInfo } = this.state;
         return (
+            
             <div className="product-list">
                 {products.map(product => (
                     <article key={product._id}>
